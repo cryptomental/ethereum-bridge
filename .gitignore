@@ -5,6 +5,7 @@ keys.json
 *.swp
 *.lock
 .node*
+.idea
 config/db.json
 !database/.keep
 database/*
