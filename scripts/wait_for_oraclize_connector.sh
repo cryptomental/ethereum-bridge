@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MAX_RETRIES=120
+MAX_RETRIES=180
 
 for i in `seq ${MAX_RETRIES}` ; do
     IS_ORACLIZE_CONNECTOR_CONFIG_AVAILABLE=`ls -1 /ethereum-bridge/config/instance/ | wc -l`
@@ -11,5 +11,5 @@ for i in `seq ${MAX_RETRIES}` ; do
     sleep 1
 done
 
-echo "Oraclize connector did not initialize within 2 minutes. Aborting..." >&2
+echo "Oraclize connector did not initialize within 3 minutes. Aborting..." >&2
 exit 1
